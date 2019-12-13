@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="../css/custom.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <script>
         $(document).ready(function () {
             $("#human-nav-bar").load("partials/navBar.html");
+            $("#human-footer").load("html/partials/footer.html");
             $(window).bind("load", function () {
                 $("#nav-feature").addClass("active");
             });
@@ -37,23 +38,39 @@
                             <textarea class="form-control" placeholder="Explain your feature in less than 100 words"
                                 rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn primary">Submit</button>
+                        <button type="button" class="btn btn-primary" id="featureSubmitBtn">Submit</button>
                     </form>
+                    <div class="human-hidden">
+                        <img src="/assets/spinner.gif.gif" />
+                        <p><i>Sending Data to our Server...</i></p>
+                    </div>
                 </div>
                 <div class="col">
-                    <h3 class="font-weight-normal">Their Suggestions.</h3>
-                    <p class="lead">
-                        This is what peeps like you think will help one be more human.
-                    </p>
+                    <div class="card human-features-suggestion">
+                        <h5 class="card-header">Their suggestions</h5>
+                        <div class="card-body">
+                          <p class="lead">
+                            This is what peeps like you think will help one be more human
+                          </p>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              Reduce Social Media by 10% each day
+                              <span class="badge badge-success">Kripa, 3 seconds ago</span>
+                            </li>
+                            <li class="list-group-item">
+                              Something : Dapibus ac facilisis in
+                            </li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                          </ul>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="navbar-dark bg-dark human-footer">
-        <p>
-            <center> &copy All rights Reserved The Human Project. 2019</center>
-        </p>
-    </footer>
+    <div id="human-footer"></div>
+    <script src="/js/features.js"></script>
+
 </body>
 
 </html>
