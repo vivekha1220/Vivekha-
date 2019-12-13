@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="../css/custom.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <script>
         $(document).ready(function () {
             $("#human-nav-bar").load("partials/navBar.html");
+            $("#human-footer").load("html/partials/footer.html");
             $(window).bind("load", function () {
                 $("#nav-feature").addClass("active");
             });
@@ -49,11 +50,8 @@
             </div>
         </div>
     </main>
-    <footer class="navbar-dark bg-dark human-footer">
-        <p>
-            <center> &copy All rights Reserved The Human Project. 2019</center>
-        </p>
-    </footer>
+    <div id="human-footer"></div>
+
 </body>
 
 </html>
